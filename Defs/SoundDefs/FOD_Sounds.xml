@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <SoundDef>
+        <defName>FOD_Explosion_Spark</defName>
+        <maxSimultaneous>1</maxSimultaneous>
+        <eventNames />
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/ExplosionSpark</clipPath>
+                    </li>
+                </grains>
+                <pitchRange>
+                  <min>0.9152174</min>
+                  <max>1.042391</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>FOD_StrikeLighter</defName>
+        <maxSimultaneous>1</maxSimultaneous>
+        <eventNames />
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Strikes/StrikeLighter</clipPath>
+                    </li>
+                </grains>
+                <pitchRange>
+                  <min>0.9152174</min>
+                  <max>1.042391</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>FOD_StrikeFlintSteel</defName>
+        <maxSimultaneous>1</maxSimultaneous>
+        <eventNames />
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Strikes/StrikeFlintSteel</clipPath>
+                    </li>
+                </grains>
+                <pitchRange>
+                  <min>0.9152174</min>
+                  <max>1.042391</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>FOD_StrikeTinderbox</defName>
+        <maxSimultaneous>1</maxSimultaneous>
+        <eventNames />
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Strikes/StrikeFlintSteel</clipPath>
+                    </li>
+                </grains>
+                <pitchRange>
+                  <min>0.9152174</min>
+                  <max>1.042391</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>FOD_PickupLighter</defName>
+        <maxSimultaneous>1</maxSimultaneous>
+        <eventNames />
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Interact/Lighter</clipPath>
+                    </li>
+                </grains>
+                <pitchRange>
+                  <min>0.9152174</min>
+                  <max>1.042391</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>FOD_PickupTinderbox</defName>
+        <maxSimultaneous>1</maxSimultaneous>
+        <eventNames />
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Interact/FlintSteel</clipPath>
+                    </li>
+                </grains>
+                <pitchRange>
+                  <min>0.9152174</min>
+                  <max>1.042391</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>FOD_PickupFlintSteel</defName>
+        <maxSimultaneous>1</maxSimultaneous>
+        <eventNames />
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Interact/FlintSteel</clipPath>
+                    </li>
+                </grains>
+                <pitchRange>
+                  <min>0.9152174</min>
+                  <max>1.042391</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+</Defs>

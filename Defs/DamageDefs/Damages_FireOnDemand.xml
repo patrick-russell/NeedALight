@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <DamageDef ParentName="LocalInjuryBase" Name="FOD_Spark">
+      <defName>FOD_Spark</defName>
+      <workerClass>DamageWorker_Flame</workerClass>
+      <label>Hot Iron Spark</label>
+      <hasForcefulImpact>false</hasForcefulImpact>
+      <makesBlood>false</makesBlood>
+      <canInterruptJobs>false</canInterruptJobs>
+      <externalViolence>true</externalViolence>
+      <deathMessage>{0} has burned to death.</deathMessage>
+      <hediff>Burn</hediff>
+      <armorCategory>Heat</armorCategory>
+      <spreadOut>true</spreadOut>
+      <explosionDamage>1</explosionDamage>
+      <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+      <explosionCellMote>Mote_BlastFlame</explosionCellMote>
+      <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+      <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+      <soundExplosion>FOD_Explosion_Spark</soundExplosion>
+      <combatLogRules>Damage_Flame</combatLogRules>
+    </DamageDef>
+</Defs>

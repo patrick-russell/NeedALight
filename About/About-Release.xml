@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Need a Light?</name>
+	<author>WandererOBTm101</author>
+	<targetVersion>0.18.0</targetVersion>
+	<description>
+    Fire When you want it. Need a light?
+    Adds 2 tools used to start a fire. The first is the simple flint and steel. And the second is a hardy fliptop steel lighter. Craftable at a crafting spot or smithy.
+
+    Be careful, your pawns can burn themselves using these tools.
+
+    This is an early release and might be bugs. Please let me know here: https://github.com/patrick-russell/NeedALight/issues
+  </description>
+	<url>https://steamcommunity.com/id/WandererOBTm101/myworkshopfiles/?appid=294100</url>
+</ModMetaData>

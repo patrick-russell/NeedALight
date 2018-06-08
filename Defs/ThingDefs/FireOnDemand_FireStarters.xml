@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ======================Firestarters============================ -->
+	<ThingDef ParentName="FOD_BaseFireStarter">
+		<defName>FOD_FireStarter_FlintSteel</defName>
+		<label>Flint and Steel</label>
+		<description>A piece of hard stone and carbon steel used to start fires</description>
+		<graphicData>
+			<texPath>Things/FireStarters/Flintandsteel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>FOD_PickupFlintSteel</soundInteract>
+		<techLevel>Neolithic</techLevel>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>1</costStuffCount>
+		<costList>
+			<Steel>1</Steel>
+		</costList>
+		<statBases>
+			<Mass>0.1</Mass>
+			<WorkToMake>1000</WorkToMake>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.05</AccuracyMedium>
+			<AccuracyLong>0.0</AccuracyLong>
+			<RangedWeapon_Cooldown>7.45</RangedWeapon_Cooldown>
+			<Weapon_Bulk>0.5</Weapon_Bulk>
+		</statBases>
+		<verbs>
+			<li>
+				<label>strike lighter</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>2</range>
+				<forcedMissRadius>1</forcedMissRadius>
+				<warmupTime>.75</warmupTime>
+				<noiseRadius>2</noiseRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<soundCast>FOD_StrikeFlintSteel</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>FOD_Spark_Lighter</defaultProjectile>
+			</li>
+		</verbs>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+				<li>CraftingSpot</li>
+			</recipeUsers>
+			<effectWorking>Smelt</effectWorking>
+			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+		</recipeMaker>
+	</ThingDef>
+	<ThingDef ParentName="FOD_BaseFireStarter">
+		<defName>FOD_FireStarter_Lighter</defName>
+		<label>Lighter</label>
+		<description>Steel fillable lighter with a flip top. Ancient but effective design.</description>
+		<graphicData>
+			<texPath>Things/FireStarters/Lighter</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>FOD_PickupLighter</soundInteract>
+		<techLevel>Industrial</techLevel>
+		<costList>
+			<Steel>1</Steel>
+			<Chemfuel>1</Chemfuel>
+		</costList>
+		<statBases>
+			<Mass>0.05</Mass>
+			<WorkToMake>6500</WorkToMake>
+			<AccuracyTouch>0.99</AccuracyTouch>
+			<AccuracyShort>0.92</AccuracyShort>
+			<AccuracyMedium>0.0</AccuracyMedium>
+			<AccuracyLong>0.0</AccuracyLong>
+			<RangedWeapon_Cooldown>2.45</RangedWeapon_Cooldown>
+			<Weapon_Bulk>0.1</Weapon_Bulk>
+		</statBases>
+		<verbs>
+			<li>
+				<label>strike lighter</label>
+				<verbClass>FireOnDemand.Verb_FlickLighter</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>2</range>
+				<forcedMissRadius>0</forcedMissRadius>
+				<warmupTime>.75</warmupTime>
+				<noiseRadius>2</noiseRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<soundCast>FOD_StrikeLighter</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>FOD_Spark_Lighter</defaultProjectile>
+			</li>
+		</verbs>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+			<effectWorking>Smelt</effectWorking>
+			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+		</recipeMaker>
+	</ThingDef>
+	<!-- ======================Sparks============================ -->
+	<ThingDef Class="FireOnDemand.ThingDef_FireStarterSpark" ParentName="FOD_BaseSpark">
+		<defName>FOD_Spark_Lighter</defName>
+		<label>Lighter Flame</label>
+		<graphicData>
+			<texPath>Things/Sparks/LighterSpark</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>FOD_Spark</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<speed>40</speed>
+		</projectile>
+		<ChanceToBurnSelf>0.07</ChanceToBurnSelf>
+		<HediffToAdd>Burn</HediffToAdd>
+		<thingClass>FireOnDemand.Projectile_FireStarterSpark</thingClass>
+	</ThingDef>
+	<!-- ======================BASES================================== -->
+	<ThingDef Abstract="True" Name="FOD_BaseFireStarter" ParentName="FOD_BaseWeapon">
+		<techLevel>Neolithic</techLevel>
+		<weaponTags>
+			<li>FireStarter</li>
+		</weaponTags>
+		<thingCategories>
+			<li>WeaponsRanged</li>
+		</thingCategories>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+			<effectWorking>Smith</effectWorking>
+			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+		</recipeMaker>
+	</ThingDef>
+	<ThingDef Abstract="True" Name="FOD_BaseSpark">
+		<!--  Can we make this a base thing? -->
+		<category>Projectile</category>
+		<thingClass>Spark</thingClass>
+		<label>spark</label>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<neverMultiSelect>true</neverMultiSelect>
+		<projectile>
+			<alwaysFreeIntercept>true</alwaysFreeIntercept>
+			<speed>1.5</speed>
+		</projectile>
+	</ThingDef>
+	<ThingDef Abstract="True" Name="FOD_BaseWeapon">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>true</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<equipmentType>Primary</equipmentType>
+		<useHitPoints>true</useHitPoints>
+		<pathCost>10</pathCost>
+		<selectable>true</selectable>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Beauty>-6</Beauty>
+			<SellPriceFactor>0.20</SellPriceFactor>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+		</comps>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+	</ThingDef>
+</Defs>
