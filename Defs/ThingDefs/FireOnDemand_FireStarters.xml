@@ -23,7 +23,7 @@
 			<WorkToMake>1000</WorkToMake>
 			<AccuracyTouch>0.85</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.05</AccuracyMedium>
+			<AccuracyMedium>0.0</AccuracyMedium>
 			<AccuracyLong>0.0</AccuracyLong>
 			<RangedWeapon_Cooldown>7.45</RangedWeapon_Cooldown>
 			<Weapon_Bulk>0.5</Weapon_Bulk>
@@ -36,7 +36,7 @@
 				<range>2</range>
 				<forcedMissRadius>1</forcedMissRadius>
 				<warmupTime>.75</warmupTime>
-				<noiseRadius>2</noiseRadius>
+				<noiseRadius>4</noiseRadius>
 				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
 				<soundCast>FOD_StrikeFlintSteel</soundCast>
 				<targetParams>
@@ -120,8 +120,8 @@
 		<projectile>
 			<flyOverhead>false</flyOverhead>
 			<damageDef>FOD_Spark</damageDef>
-			<damageAmountBase>2</damageAmountBase>
-			<speed>40</speed>
+			<damageAmountBase>1</damageAmountBase>
+			<speed>30</speed>
 		</projectile>
 		<ChanceToBurnSelf>0.07</ChanceToBurnSelf>
 		<HediffToAdd>Burn</HediffToAdd>
